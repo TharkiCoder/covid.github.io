@@ -1,0 +1,49 @@
+ *{
+   margin:0px;
+   padding:0px;
+ }
+
+ .bg-indigo{
+   background-color: #6f42c1;
+   color:#fff;
+ }
+
+ .nav-link{
+   color:#fff;
+ }
+
+ .nav-link:hover{
+   color:#fff;
+ }
+
+#main-img{
+  width: 60%;
+  height:60%;
+  animation: rotate 7s linear infinite;
+  -webkit-animation: rotate 7s linear infinite;
+}
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+h1,h5{
+  color:#000;
+}
+
+.heading{
+  color:#6f42c1;
+}
+
+#countrySearch{
+  width:50%;
+}
+#submitbtn:hover{
+  color:#fff;
+}

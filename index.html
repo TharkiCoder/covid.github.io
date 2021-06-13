@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Covid-19</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-indigo">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://cdn3.iconfinder.com/data/icons/medical-isometric-1/1024/ic_covid.png" alt="" width="40" height="40" class="d-inline-block align-text-top align-items-center">
+          COVID-19
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutcovid">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#symptoms">Symptoms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#info">Info</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row align-items-center my-3 mx-4">
+      <div class="col px-4">
+        <img src="https://cdn3.iconfinder.com/data/icons/medical-isometric-1/1024/ic_covid.png" id="main-img">
+      </div>
+      <div class="col-6">
+        <h1>Let's Stay Safe & Fight Together</h1>
+        <h5><i>Against Corona Virus</i></h5>
+      </div>
+    </div>
+
+      <div class="container">
+        <h4 class="text-center my-4">Covid-19 Update</h4>
+        <div class="row row-cols-3">
+            <div class="col text-center" id="totalCase">0</div>
+            <div class="col text-center" id="totalDeath">0</div>
+            <div class="col text-center" id="totalRecovered">0</div>
+          </div>
+          <div class="row row-cols-3">
+            <div class="col text-center"><b>Total Case</b></div>
+            <div class="col text-center"><b>Death</b></div>
+            <div class="col text-center"><b>Recovered</b></div>
+          </div>
+      </div>
+
+    <div class="container">
+      <h1 class="text-center my-5 heading" id="aboutcovid">About Covid-19</h1>
+      <div class="row align-items-center px-4">
+        <div class="col">
+          <h5>What is Corona Virus</h5><p> Coronaviruses are a type of virus. There are many different kinds, and some cause disease. A coronavirus identified in 2019, SARS-CoV-2, has caused a pandemic of respiratory illness, called COVID-19.
+          </p>
+
+          <h5>How does the coronavirus spread?</h5><p>
+          As of now, researchers know that the coronavirus is spread through droplets and virus particles released into the air when an infected person breathes, talks, laughs, sings, coughs or sneezes. Larger droplets may fall to the ground in a few seconds, but tiny infectious particles can linger in the air and accumulate in indoor places, especially where many people are gathered and there is poor ventilation. This is why mask-wearing, hand hygiene and physical distancing are essential to preventing COVID-19.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="text-center my-5 heading" id="symptoms">Covid-19 Symptoms</h1>
+      <div class="row row-cols-3">
+          <div class="col text-center"><img src="https://cdn1.iconfinder.com/data/icons/coronavirus-information/128/__cough_tissue_close_mouth-512.png" width="100px"></div>
+          <div class="col text-center"><img src="https://cdn4.iconfinder.com/data/icons/coronavirus-color/64/nose-snot-cold-flu-sick-fever-512.png" width="100px"></div>
+          <div class="col text-center"><img src="https://cdn2.iconfinder.com/data/icons/covid-19-2/64/07-Fever-512.png" width="100px"></div>
+      </div>
+      <div class="row row-cols-3">
+          <div class="col text-center">cough</div>
+          <div class="col text-center">runny noise</div>
+          <div class="col text-center">fever</div>
+      </div><br><br>
+      <div class="row row-cols-3">
+          <div class="col text-center"><img src="https://cdn3.iconfinder.com/data/icons/virus-transmission-flat/48/Fever-512.png" width="100px"></div>
+          <div class="col text-center"><img src="https://cdn2.iconfinder.com/data/icons/virus-15/512/tired_illness_healthcare_sickness_fatigue_tiredness-512.png" width="100px"></div>
+          <div class="col text-center"><img src="https://cdn1.iconfinder.com/data/icons/coronavirus-information/128/__shortness_breathe_problem-512.png" width="100px"></div>
+      </div>
+      <div class="row row-cols-3">
+          <div class="col text-center">cold</div>
+          <div class="col text-center">tiredness</div>
+          <div class="col text-center">difficulty breathing</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="text-center my-5 heading" id="info">Covid-19 Info</h1>
+      <div id="message">
+
+      </div>
+            <div class="d-flex my-2 align-items-center">
+            <input class="form-control me-2" type="search" placeholder="Enter Country name.." aria-label="Search" id="countrySearch">
+            <button class="btn bg-indigo" type="submit" onclick="main()" id="submitbtn">Search</button>
+        </div>
+      <table class="table">
+        <thead class="bg-indigo">
+          <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Confirmed</th>
+            <th scope="col">Death</th>
+            <th scope="col">Recovered</th>
+          </tr>
+        </thead>
+        <tbody id="data-fetch">
+
+        </tbody>
+    </table>
+    </div>
+
+    <footer class="bg-indigo mb-0" >
+      <p class="mb-0 text-center py-2">
+        <i>~Aman Singh</i><br>
+        <a href="https://www.instagram.com/immortal_freak45/" class="bg-indigo"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/AmanSin32612202?s=09" class="bg-indigo"><i class="fab fa-twitter mx-3"></i></a>
+        <a href="https://www.linkedin.com/in/aman-singh-5382351b2" class="bg-indigo"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/TharkiCoder" class="bg-indigo"><i class="fab fa-github mx-3"></i></a>
+         <br><i>&#169; 2021 copyright all right reserved</i>
+      </p>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
