@@ -2,7 +2,6 @@
    margin:0px;
    padding:0px;
  }
-
  .bg-indigo{
    background-color: #6f42c1;
    color:#fff;
@@ -15,12 +14,10 @@
  .nav-link:hover{
    color:#fff;
  }
-
 #logo_img{
   animation: rotate 7s linear infinite;
   -webkit-animation: rotate 7s linear infinite;
 }
-
 #main-img{
   width: 60%;
   height:60%;
@@ -52,6 +49,6 @@ h1,h5{
 #submitbtn:hover{
   color:#fff;
 }
-td{
-   font-size:12px;
-   }
+tr{
+  font-size: 12px;
+}
