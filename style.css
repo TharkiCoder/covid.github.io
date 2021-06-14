@@ -16,6 +16,11 @@
    color:#fff;
  }
 
+#logo_img{
+  animation: rotate 7s linear infinite;
+  -webkit-animation: rotate 7s linear infinite;
+}
+
 #main-img{
   width: 60%;
   height:60%;
