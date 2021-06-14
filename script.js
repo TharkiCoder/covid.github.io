@@ -44,14 +44,17 @@ function main(){
     }
   })
 }
-// p.value+="${data.data[i].location}"+" "+data.data[i].confirmed+"<br>";
-// tC+=data.data[i].confirmed;
-// tD+=data.data[i].dead;
-// tR+=data.data[i].recovered
-// "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>NO Result Found</strong> <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>"
 
-// message.innerHTML+="<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">"+countrySearch.value+"<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>";
-
-// "<div class=\"alert alert-success\" role=\"alert\"><h4 class=\"alert-heading\">"+d.data[i].location+"</h4><p><b>Confirmed Case :</b>"+d.data[i].confirmed+"<br><b>Death Case :</b>"+d.data[i].dead+"<br><b>Recovered Case :</b>"+d.data[i].recovered+"</p><hr><p class=\"mb-0\">Covid-19 Alert</p></div>"
-
-// https://www.countryflags.io/:/shiny/64.png
+function speak(a,b){
+  let v=document.getElementById(a).innerHTML;
+  let w=document.getElementById(b).style.color;
+  // alert(w);
+  if(w!='rgb(153, 153, 153)'){
+    document.getElementById(b).style.color='rgb(153, 153, 153)';
+    responsiveVoice.cancel();
+  }
+  else{
+  document.getElementById(b).style.color='rgb(111, 66, 193)';
+  responsiveVoice.speak(v,"UK English Female");
+  }
+}
