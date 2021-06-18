@@ -48,7 +48,6 @@ function main(){
 function speak(a,b){
   let v=document.getElementById(a).innerHTML;
   let w=document.getElementById(b).style.color;
-  // alert(w);
   if(w!='rgb(153, 153, 153)'){
     document.getElementById(b).style.color='rgb(153, 153, 153)';
     responsiveVoice.cancel();
@@ -57,4 +56,22 @@ function speak(a,b){
   document.getElementById(b).style.color='rgb(111, 66, 193)';
   responsiveVoice.speak(v,"UK English Female");
   }
+}
+
+function health_meter(){
+   var c=0;
+  var flexCheckChecked1=document.getElementById('flexCheckChecked1').checked;
+  var flexCheckChecked2=document.getElementById('flexCheckChecked2').checked;
+  var flexCheckChecked3=document.getElementById('flexCheckChecked3').checked;
+  var flexCheckChecked4=document.getElementById('flexCheckChecked4').checked;
+  var flexCheckChecked5=document.getElementById('flexCheckChecked5').checked;
+  var flexCheckChecked6=document.getElementById('flexCheckChecked6').checked;
+  a=[flexCheckChecked1,flexCheckChecked2,flexCheckChecked3,flexCheckChecked4,flexCheckChecked5,flexCheckChecked6]
+  for(let i=0;i<=5;i++){
+    if(a[i]==true){
+      c+=1
+    }
+  }
+  document.getElementById('needle').style.transform='rotate('+30*c+'deg)';
+  document.getElementById('Safety').innerHTML=100-c*16+'% Safe';
 }
