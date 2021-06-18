@@ -13,8 +13,8 @@
     <title>Covid-19</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-indigo">
-      <div class="container-fluid">
+    <nav class="navbar navbar-dark bg-indigo sticky-top">
+      <div class="container-fluid ">
         <a class="navbar-brand" href="#">
           <img src="https://cdn3.iconfinder.com/data/icons/medical-isometric-1/1024/ic_covid.png" alt="" width="40" height="40" class="d-inline-block align-text-top align-items-center" id="logo_img">
           COVID-19
@@ -103,11 +103,51 @@
       <div id="message">
 
       </div>
-            <div class="d-flex my-2 align-items-center">
+          <div class="d-flex my-2 align-items-center">
             <input class="form-control me-2" type="search" placeholder="Enter Country name.." aria-label="Search" id="countrySearch">
             <button class="btn bg-indigo" type="submit" onclick="main()" id="submitbtn">Search</button>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn bg-indigo mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="health-meter">
+                <i class="fa fa-user-md" aria-hidden="true"></i>
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title heading" id="exampleModalLabel">Mr. Doctor <i class="fa fa-stethoscope" aria-hidden="true"></i></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                      <div class="meter">
+                        <div class="meter-body">
+                          <div class="needle" id="needle">
+
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form">
+                        <div class="element-form"><br><p id="Safety">100% Safe</p>
+                          <h3 class="heading text-center">Choose your problem</h3>
+                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked1" >Fever <br>
+                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked2" >Runny noise <br>
+                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked3" >Cough <br>
+                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked4" >Cold <br>
+                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked5" >Tiredness <br>
+                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked6" >Difficulty Breathing <br>
+                          <button class="btn bg-indigo  my-2 text-center" type="submit" onclick="health_meter()" id="submitbtn"><i class="fa fa-calculator" aria-hidden="true"></i> Submit</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
-      <table class="table">
+      <table class="table table-striped table-hover">
         <thead class="bg-indigo">
           <tr>
             <th scope="col">Country</th>
