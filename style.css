@@ -49,6 +49,47 @@ h1,h5{
 #submitbtn:hover{
   color:#fff;
 }
+#health-meter:hover{
+  color:#fff;
+}
 tr{
   font-size: 12px;
+}
+
+.meter{
+  display:flex;
+  align-item:center;
+  justify-content:center;
+}
+.meter-body{
+  width:100%;
+  max-width:240px;
+  padding-bottom:110px;
+  /* background-color:#6f42c1; */
+  border-top:25px solid #ffee11;
+  border-left:25px solid #0be881;
+  border-right:25px solid #ff3333;
+  border-top-left-radius:100% 200%;
+  border-top-right-radius:100% 200%;
+}
+.needle{
+  width:95px;
+  height:5px;
+  color:#6f42c1;
+  background-color:#6f42c1;
+  position:absolute;
+  top:31%;
+  transition-property:transform;
+  transition-delay: 0s;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+  transform:rotate(0deg);
+  -webkit-transform:rotate(0deg);
+  transform-origin:bottom right;
+  -webkit-transform-origin:bottom right;
+  border-radius:5px;
+}
+#Safety{
+  color:#6f42c1;
+  text-align: center;
 }
