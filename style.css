@@ -1,6 +1,7 @@
  *{
    margin:0px;
    padding:0px;
+   outline: none;
  }
  .bg-indigo{
    background-color: #6f42c1;
@@ -14,6 +15,16 @@
  .nav-link:hover{
    color:#fff;
  }
+.dropdown-toggle,.dropdown-toggle:hover{
+  color:#fff;
+  outline: none;
+  border:0px;
+}
+.dropdown-toggle:focus{
+  color:#fff;
+  outline: none;
+  border: 0px;
+}
 #logo_img{
   animation: rotate 7s linear infinite;
   -webkit-animation: rotate 7s linear infinite;
@@ -92,4 +103,7 @@ tr{
 #Safety{
   color:#6f42c1;
   text-align: center;
+}
+#face-btn:hover{
+  color:#fff;
 }
