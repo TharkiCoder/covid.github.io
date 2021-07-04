@@ -104,6 +104,30 @@ tr{
   color:#6f42c1;
   text-align: center;
 }
+
 #face-btn:hover{
   color:#fff;
+}
+
+#webcam-container {
+  margin:25px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 6px 10px 0 #555,0 7px 21px #555;
+}
+#label-container{
+  margin:25px;
+}
+@media(max-width:360px){
+  .navbar-brand{
+    display: block;
+    margin-left:80px;
+  }
+  .nav-pills{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0px;
+    margin:0px;
+  }
+
 }
