@@ -29,9 +29,16 @@
           <li class="nav-item">
             <a class="nav-link" href="#symptoms">Symptoms</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#info">Info</a>
-          </li>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#info">Info</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" >Health Meter</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Mask Detection</a></li>
+            </ul>
+          </div>
         </ul>
       </div>
     </nav>
@@ -45,7 +52,6 @@
         <h5><i>Against Corona Virus</i></h5>
       </div>
     </div>
-
       <div class="container">
         <h4 class="text-center my-4">Covid-19 Update</h4>
         <div class="row row-cols-3">
@@ -110,43 +116,8 @@
               <button type="button" class="btn bg-indigo mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="health-meter">
                 <i class="fa fa-user-md" aria-hidden="true"></i>
               </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title heading" id="exampleModalLabel">Mr. Doctor <i class="fa fa-stethoscope" aria-hidden="true"></i></h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-
-                      <div class="meter">
-                        <div class="meter-body">
-                          <div class="needle" id="needle">
-
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="form">
-                        <div class="element-form"><br><p id="Safety">100% Safe</p>
-                          <h3 class="heading text-center">Choose your problem</h3>
-                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked1" >Fever <br>
-                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked2" >Runny noise <br>
-                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked3" >Cough <br>
-                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked4" >Cold <br>
-                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked5" >Tiredness <br>
-                          <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked6" >Difficulty Breathing <br>
-                          <button class="btn bg-indigo  my-2 text-center" type="submit" onclick="health_meter()" id="submitbtn"><i class="fa fa-calculator" aria-hidden="true"></i> Submit</button>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
         </div>
+
       <table class="table table-striped table-hover">
         <thead class="bg-indigo">
           <tr>
@@ -162,6 +133,69 @@
     </table>
     </div>
 
+    <!-- Modal For Mr docter-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title heading" id="exampleModalLabel">Mr. Doctor <i class="fa fa-stethoscope" aria-hidden="true"></i></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="meter">
+              <div class="meter-body">
+                <div class="needle" id="needle">
+
+                </div>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="element-form"><br><p id="Safety">100% Safe</p>
+                <h3 class="heading text-center">Choose your problem</h3>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked1" >Fever <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked2" >Runny noise <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked3" >Cough <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked4" >Cold <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked5" >Tiredness <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked6" >Difficulty Breathing <br>
+                <button class="btn bg-indigo  my-2 text-center" type="submit" onclick="health_meter()" id="submitbtn"><i class="fa fa-calculator" aria-hidden="true"></i> Submit</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Launch static backdrop modal
+    </button> -->
+
+    <!-- Modal for Face Recognigation-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+            <h5 class="modal-title heading" id="staticBackdropLabel">Mr. Doctor <i class="fa fa-mask" aria-hidden="true"></i></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="m-2">Detect Your Mark</div>
+            <button type="button" onclick="init()" class="btn bg-indigo" id="face-btn">Start</button>
+            <div id="webcam-container"></div>
+            <div id="label-container"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <footer class="bg-indigo mb-0" >
       <p class="mb-0 text-center py-2">
         <i>~Aman Singh</i><br>
@@ -173,9 +207,50 @@
       </p>
     </footer>
     <script src="https://code.responsivevoice.org/responsivevoice.js?key=DdcmGh1F"></script>
-    <!-- <script src="https://code.responsivevoice.org/responsivevoice.js"></script> -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <!--Face Recognigation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+
+        const URL = "https://teachablemachine.withgoogle.com/models/d35bytzvz/";
+        let model, webcam, labelContainer, maxPredictions;
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            const flip = true; // whether to flip the webcam
+            webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+            await webcam.setup(); // request access to the webcam
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            // append elements to the DOM
+            document.getElementById("webcam-container").appendChild(webcam.canvas);
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) { // and class labels
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        async function loop() {
+            webcam.update(); // update the webcam frame
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        async function predict() {
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+    </script>
   </body>
 </html>
