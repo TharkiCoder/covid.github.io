@@ -25,6 +25,13 @@
   outline: none;
   border: 0px;
 }
+.dropdown-menu .dropdown-item{
+  cursor: pointer;
+}
+.dropdown-menu .dropdown-item:hover{
+  background-color:#6f42c1;
+  color:#fff;
+}
 #logo_img{
   animation: rotate 7s linear infinite;
   -webkit-animation: rotate 7s linear infinite;
@@ -117,6 +124,12 @@ tr{
 }
 #label-container{
   margin:25px;
+}
+
+.form-check-input:checked{
+  color:#6f42c1;
+  background-color: #6f42c1;
+  border: 0px;
 }
 @media(max-width:360px){
   .navbar-brand{
