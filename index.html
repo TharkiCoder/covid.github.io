@@ -30,9 +30,9 @@
             <a class="nav-link" href="#symptoms">Symptoms</a>
           </li>
           <div class="btn-group m-0 p-0">
-            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <a type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               More
-            </button>
+            </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="#info">Info</a></li>
               <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" >Health Meter</a></li>
@@ -43,12 +43,12 @@
       </div>
     </nav>
 
-    <div class="row align-items-center my-3 mx-4">
-      <div class="col px-4">
+    <div class="row align-items-center my-3 mx-4 header">
+      <div class="col-sm-6 mx-auto">
         <img src="https://cdn3.iconfinder.com/data/icons/medical-isometric-1/1024/ic_covid.png" id="main-img">
       </div>
-      <div class="col-6">
-        <h1>Let's Stay Safe & Fight Together</h1>
+      <div class="col-sm-6 my-5">
+        <h1 id="main-heading">Let's Stay Safe & Fight Together</h1>
         <h5><i>Against Corona Virus</i></h5>
       </div>
     </div>
@@ -154,13 +154,13 @@
             <div class="form">
               <div class="element-form"><br><p id="Safety">100% Safe</p>
                 <h3 class="heading text-center">Choose your problem</h3>
-                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked1" >Fever <br>
-                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked2" >Runny noise <br>
-                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked3" >Cough <br>
-                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked4" >Cold <br>
-                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked5" >Tiredness <br>
-                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked6" >Difficulty Breathing <br>
-                <button class="btn bg-indigo  my-2 text-center" type="submit" onclick="health_meter()" id="submitbtn"><i class="fa fa-calculator" aria-hidden="true"></i> Submit</button>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked1" onclick="health_meter()">Fever <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked2" onclick="health_meter()">Runny noise <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked3" onclick="health_meter()">Cough <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked4" onclick="health_meter()">Cold <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked5" onclick="health_meter()">Tiredness <br>
+                <input class="form-check-input mx-3" type="checkbox" value="" id="flexCheckChecked6" onclick="health_meter()">Difficulty Breathing <br>
+                <!-- <button class="btn bg-indigo  my-2 text-center" type="submit" onclick="health_meter()" id="submitbtn"><i class="fa fa-calculator" aria-hidden="true"></i> Submit</button> -->
               </div>
             </div>
 
@@ -169,25 +169,20 @@
       </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-      Launch static backdrop modal
-    </button> -->
-
     <!-- Modal for Face Recognigation-->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-            <h5 class="modal-title heading" id="staticBackdropLabel">Mr. Doctor <i class="fa fa-mask" aria-hidden="true"></i></h5>
+            <h5 class="modal-title heading" id="staticBackdropLabel">Mask Detection <i class="fa fa-mask" aria-hidden="true"></i></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
 
             <div class="m-2">Detect Your Mark</div>
             <button type="button" onclick="init()" class="btn bg-indigo" id="face-btn">Start</button>
-            <div id="warning-mask"></div>
+            <div id="warning-mask" class="m-3">Warning</div>
             <div id="webcam-container"></div>
             <div id="label-container"></div>
 
@@ -254,7 +249,7 @@
                   document.getElementById("warning-mask").innerHTML="<p style=\"text-align:center;color:#0f0;\">YOU HAVE WEAR THE MASK<p>";
                 }
                 else if(prediction[0].probability.toFixed(2)*100>=40 && prediction[0].probability.toFixed(2)*100<80){
-                  document.getElementById("warning-mask").innerHTML="<p style=\"text-align:center;color:#f55;\">WEAR MASK PROPERLY<p>";
+                  document.getElementById("warning-mask").innerHTML="<p style=\"text-align:center;color:#f55516;\">WEAR MASK PROPERLY<p>";
                 }
                 else{
                   document.getElementById("warning-mask").innerHTML="<p style=\"text-align:center;color:#f00;\">PLEASE WEAR MASK<p>";
