@@ -115,12 +115,21 @@ tr{
 #face-btn:hover{
   color:#fff;
 }
-
+#warning-mask{
+  text-align: center;
+  margin:10px 10px;
+}
 #webcam-container {
-  margin:25px;
+  margin:25px 110px;
   width: 200px;
   height: 200px;
   box-shadow: 0 6px 10px 0 #555,0 7px 21px #555;
+  background: url("https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.webp?cid=ecf05e47aufk21h0kq07dskcg3yf9gu5bcsjndsidicuyzog&rid=giphy.webp&ct=g");
+  background-position: center;
+}
+#webcam-container p{
+  padding: 5px;
+  color: #fff;
 }
 #label-container{
   margin:25px;
