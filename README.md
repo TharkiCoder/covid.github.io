@@ -10,4 +10,6 @@ https://tharkicoder.github.io/covid.github.io/
 <h3>Other Website Used</h3>
 1. Bootstrap<br>
 2. Font Awesome<br>
-3. Icon Finder
+3. Icon Finder<br>
+4. Teachable Machine<br>
+5. Giphy 
