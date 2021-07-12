@@ -7,20 +7,17 @@ function info(){
   var tD=0;
   var tR=0;
   var p=document.getElementById('p');
-  fetch("https://www.trackcorona.live/api/countries")
+  fetch("https://api.covid19api.com/summary")
   .then((fdata)=>{
     return fdata.json();
   })
   .then((data)=>{
-    for(let i=0;i<=200;i++){
-      tC+=data.data[i].confirmed;
-      tD+=data.data[i].dead;
-      tR+=data.data[i].recovered
-      data_fetch.innerHTML+="<tr id=\""+data.data[i].location+"\">"+"<td>"+data.data[i].location+"</td>"+"<td>"+data.data[i].confirmed+"</td>"+"<td>"+data.data[i].dead+"</td>"+"<td>"+data.data[i].recovered+"</td>"+"</tr>";
+    for(let i=0;i<=191;i++){
+      data_fetch.innerHTML+="<tr>"+"<td>"+data.Countries[i].Country+"</td>"+"<td>"+data.Countries[i].TotalConfirmed+"</td>"+"<td>"+data.Countries[i].TotalDeaths+"</td>"+"<td>"+data.Countries[i].TotalRecovered+"</td>"+"</tr>";
     }
-    totalCase.innerHTML=tC;
-    totalDeath.innerHTML=tD;
-    totalRecovered.innerHTML=tR;
+    totalCase.innerHTML=data.Global.TotalConfirmed;
+    totalDeath.innerHTML=data.Global.TotalDeaths;;
+    totalRecovered.innerHTML=data.Global.TotalRecovered;
   })
 }
 info();
@@ -28,20 +25,20 @@ info();
 function main(){
   var message=document.getElementById('message');
   var countrySearch=document.getElementById('countrySearch');
-  fetch("https://www.trackcorona.live/api/countries")
+  fetch("https://api.covid19api.com/summary")
   .then((fd)=>{
     return fd.json();
   })
   .then((d)=>{
-    for(let i=0;i<=200;i++){
-        if(countrySearch.value.toLowerCase()==d.data[i].location.toLowerCase()){
-          message.innerHTML+="<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\"><h4 class=\"alert-heading\">"+d.data[i].location+"<img src=\"https://www.countryflags.io/"+d.data[i].country_code+"/shiny/32.png\">"+"</h4><p><b>Confirmed Case :</b>"+d.data[i].confirmed+"<br><b>Death Case :</b>"+d.data[i].dead+"<br><b>Recovered Case :</b>"+d.data[i].recovered+"</p><hr><p class=\"mb-0\"><b>Updated At : </b>"+d.data[i].updated+"</p><button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>";
+    for(let i=0;i<=191;i++){
+        if(countrySearch.value.toLowerCase()==d.Countries[i].Country.toLowerCase()){
+          message.innerHTML+="<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\"><h4 class=\"alert-heading\">"+d.Countries[i].Country+"<img src=\"https://www.countryflags.io/"+d.Countries[i].CountryCode+"/shiny/32.png\">"+"</h4><p><b>Total Confirmed Case :</b>"+d.Countries[i].TotalConfirmed+"<br><b>Total Death Case :</b>"+d.Countries[i].TotalDeaths+"<br><b>Total Recovered Case :</b>"+d.Countries[i].TotalRecovered+"</p><p><b>New Confirmed Case :</b>"+d.Countries[i].NewConfirmed+"<br><b>New Death Case :</b>"+d.Countries[i].NewDeaths+"<br><b>New Recovered Case :</b>"+d.Countries[i].NewRecovered+"</p><hr><p class=\"mb-0\"><b>Updated At : </b>"+d.Countries[i].Date+"</p><button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>";
           break;
         }
-        if(i==200 && countrySearch.value.toLowerCase()!=d.data[i].location.toLowerCase()){
+        if(i==191 && countrySearch.value.toLowerCase()!=d.Countries[i].Country.toLowerCase()){
             message.innerHTML+="<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"><strong>NO Result Found</strong> <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>";
         }
-    }
+      }
   })
 }
 
