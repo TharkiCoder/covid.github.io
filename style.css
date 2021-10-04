@@ -62,7 +62,7 @@ h1,h5{
 }
 
 #countrySearch{
-  width:50%;
+  width:51%;
 }
 #submitbtn:hover{
   color:#fff;
@@ -82,7 +82,7 @@ tr{
 .meter-body{
   width:100%;
   max-width:240px;
-  padding-bottom:110px;
+  padding-bottom:111px;
   /* background-color:#6f42c1; */
   border-top:25px solid #ffee11;
   border-left:25px solid #0be881;
