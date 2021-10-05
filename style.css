@@ -18,12 +18,12 @@
 .dropdown-toggle,.dropdown-toggle:hover{
   color:#fff;
   outline: none;
-  border:0px;
+  border:1px;
 }
 .dropdown-toggle:focus{
   color:#fff;
   outline: none;
-  border: 0px;
+  border: 1px;
 }
 .dropdown-menu .dropdown-item{
   cursor: pointer;
